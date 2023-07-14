@@ -1,13 +1,14 @@
 import pyautogui
+import pyperclip
 import os
 import time
 import sys
 
 inputs = [] 
-input1 = input("What is the input? ") 
+input1 = input("Enter song: ") 
 while input1 != "": 
 	inputs.append(input1) 
-	input1 = input("What is the input? ")
+	input1 = input("Enter song: ")
 
 
 for i in inputs:
@@ -16,7 +17,9 @@ for i in inputs:
     os.system(r"C:\Users\inhor\AppData\Roaming\Spotify\Spotify.exe")
     time.sleep(1)
     pyautogui.hotkey('ctrl', 'l')
-    pyautogui.write(i, interval=0.1)
+    pyperclip.copy(i)
+    pyautogui.hotkey("ctrl", "v")
+    #pyautogui.write(i, interval=0.1)
 
     for key in ['enter', 'pagedown', 'tab', 'enter', 'enter']:
         time.sleep(2)
