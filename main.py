@@ -14,7 +14,8 @@ while input1 != "":
 for i in inputs:
     print("Searching for " + i)
 
-    os.system(r"C:\Users\inhor\AppData\Roaming\Spotify\Spotify.exe")
+    os.system(r"spotify path")
+    #enter your spotify path above in quotations
     time.sleep(1)
     pyautogui.hotkey('ctrl', 'l')
     pyperclip.copy(i)
